@@ -1,0 +1,18 @@
+apiVersion
+kind
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: express-backend
+  template:
+    metadata:
+      labels:
+        app: express-backend
+    spec:
+      containers:
+        - name: express-backend
+          imagepullpolicy: Never 
+          image:  express-backend:latest
+          ports:
+            - containerPort: 5000
